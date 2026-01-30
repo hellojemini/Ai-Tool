@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px 0;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #333;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #4b6cb7, #182848);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .ai-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .tool-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 28px;
+            color: white;
+        }
+        
+        .tool-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .tool-category {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .tool-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .visit-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f0f5ff;
+            color: #4b6cb7;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .visit-btn i {
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .tool-card:hover .visit-btn {
+            background-color: #4b6cb7;
+            color: white;
+        }
+        
+        .tool-card:hover .visit-btn i {
+            transform: translateX(5px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+            margin-top: 50px;
+        }
+        
+        /* Color schemes for different tools */
+        .gemini { background-color: #8a2be2; }
+        .chatgpt { background-color: #10a37f; }
+        .midjourney { background-color: #000; }
+        .claude { background-color: #d97706; }
+        .dalle { background-color: #0ea5e9; }
+        .stablediffusion { background-color: #7c3aed; }
+        .copilot { background-color: #2563eb; }
+        .perplexity { background-color: #0f766e; }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .ai-tools {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Tools Directory</h1>
+            <p class="subtitle">Click on any AI tool below to visit their website directly. Explore the latest in artificial intelligence technology.</p>
+        </header>
+        
+        <main>
+            <div class="ai-tools">
+                <!-- Gemini -->
+                <a href="https://gemini.google.com" target="_blank" class="tool-card">
+                    <div class="card-header">
+                        <div class="icon gemini">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <div class="tool-name">Google Gemini</div>
+                            <div class="tool-category">Text & Multimodal AI</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="tool-description">Google's advanced AI assistant that can understand, explain, and generate text, code, and images. Formerly known as Bard.</p>
+                        <div class="visit-btn">Visit Website <i class="fas fa-external-link-alt"></i></div>
+                    </div>
+                </a>
+                
+                <!-- ChatGPT -->
+                <a href="https://chat.openai.com" target="_blank" class="tool-card">
+                    <div class="card-header">
+                        <div class="icon chatgpt">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div>
+                            <div class="tool-name">ChatGPT</div>
+                            <div class="tool-category">Conversational AI</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="tool-description">OpenAI's conversational AI that can answer questions, write content, generate code, and assist with various tasks.</p>
+                        <div class="visit-btn">Visit Website <i class="fas fa-external-link-alt"></i></div>
+                    </div>
+                </a>
+                
+                <!-- Midjourney -->
+                <a href="https://www.midjourney.com" target="_blank" class="tool-card">
+                    <div class="card-header">
+                        <div class="icon midjourney">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div>
+                            <div class="tool-name">Midjourney</div>
+                            <div class="tool-category">Image Generation</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="tool-description">AI-powered image generation tool that creates stunning artwork, illustrations, and designs from text descriptions.</p>
+                        <div class="visit-btn">Visit Website <i class="fas fa-external-link-alt"></i></div>
+                    </div>
+                </a>
+                
+                <!-- Claude -->
+                <a href="https://claude.ai" target="_blank" class="tool-card">
+                    <div class="card-header">
+                        <div class="icon claude">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <div class="tool-name">Claude AI</div>
+                            <div class="tool-category">Conversational AI</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="tool-description">Anthropic's AI assistant focused on being helpful, harmless, and honest. Excels at writing, analysis, and coding tasks.</p>
+                        <div class="visit-btn">Visit Website <i class="fas fa-external-link-alt"></i></div>
+                    </div>
+                </a>
+                
+                <!-- DALL-E -->
+                <a href="https://openai.com/dall-e-2" target="_blank" class="tool-card">
+                    <div class="card-header">
+                        <div class="icon dalle">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div>
+                            <div class="tool-name">DALL-E</div>
+                            <div class="tool-category">Image Generation</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="tool-description">OpenAI's image generation model that creates realistic images and art from text descriptions.</p>
+                        <div class="visit-btn">Visit Website <i class="fas fa-external-link-alt"></i></div>
+                    </div>
+                </a>
+                
+                <!-- Stable Diffusion -->
+                <a href="https://stability.ai" target="_blank" class="tool-card">
+                    <div class="card-header">
+                        <div class="icon stablediffusion">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div>
+                            <div class="tool-name">Stable Diffusion</div>
+                            <div class="tool-category">Open Source Image AI</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="tool-description">Open source text-to-image model that generates detailed images conditioned on text descriptions.</p>
+                        <div class="visit-btn">Visit Website <i class="fas fa-external-link-alt"></i></div>
+                    </div>
+                </a>
+                
+                <!-- GitHub Copilot -->
+                <a href="https://github.com/features/copilot" target="_blank" class="tool-card">
+                    <div class="card-header">
+                        <div class="icon copilot">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <div class="tool-name">GitHub Copilot</div>
+                            <div class="tool-category">AI Programming Assistant</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="tool-description">Your AI pair programmer that suggests code and entire functions in real-time, right from your editor.</p>
+                        <div class="visit-btn">Visit Website <i class="fas fa-external-link-alt"></i></div>
+                    </div>
+                </a>
+                
+                <!-- Perplexity -->
+                <a href="https://www.perplexity.ai" target="_blank" class="tool-card">
+                    <div class="card-header">
+                        <div class="icon perplexity">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <div class="tool-name">Perplexity AI</div>
+                            <div class="tool-category">Answer Engine</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="tool-description">AI-powered answer engine that provides accurate answers to questions with sources and citations.</p>
+                        <div class="visit-btn">Visit Website <i class="fas fa-external-link-alt"></i></div>
+                    </div>
+                </a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>AI Tools Directory &copy; 2023 | Click any card to visit the AI tool's website</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">All trademarks belong to their respective owners. This is a directory page only.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Add subtle animation to cards on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.tool-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+        
+        // Add click confirmation
+        document.querySelectorAll('.tool-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const toolName = this.querySelector('.tool-name').textContent;
+                console.log(`Opening ${toolName} website...`);
+                
+                // In a real implementation, you might want to track this click
+                // For now, we'll just let the link open naturally
+            });
+        });
+    </script>
+</body>
+</html>
